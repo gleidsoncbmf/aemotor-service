@@ -1,7 +1,7 @@
 from model.pessoa import Pessoa
 from helpers.database import db
 
-class Funcionario(Pessoa):
+class Funcionario(Pessoa, db.Model):
     
     __tablename__ = "tb_funcionario"
     __mapper_args__ = {'polymorphic_identity': 'funcionario', 'concrete': True}
