@@ -1,7 +1,7 @@
 from helpers.database import db
 from sqlalchemy.types import String
 
-class Pessoa():
+class Pessoa(db.Model):
     
      __tablename__ = "tb_pessoa"
     
