@@ -1,6 +1,16 @@
 from model.aluno import Aluno
+from helpers.database import db
 
-class Passageiro(Aluno):
+class Passageiro(Aluno, db.Model):
+    
+     __tablename__ = "tb_passageiro"
+
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(50), nullable=False)
+    cidadeOrigem = db.Column(db.String(90), nullable=False)
+    cidadeDestino = db.Column(db.String(90), nullable=False)
+
+    aluno_parent = db.Column(db.Integer, db.ForeignKey('tb_aluno.id'))
 
     def __init__(self, nome, nascimento, email, telefone, instituicaoDeEnsino, curso, matricula, cidadeOrigem, cidadeDestino):
         super().__init__(nome, nascimento, email, telefone, instituicaoDeEnsino, curso, matricula)
