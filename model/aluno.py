@@ -1,5 +1,5 @@
 from model.pessoa import Pessoa
-from helpers.database import db
+from helpers.database import d
 
 class Aluno(Pessoa):
     
