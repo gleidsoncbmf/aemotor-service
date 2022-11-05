@@ -1,6 +1,6 @@
 from helpers.database import db
 
-class Cidade():
+class Cidade(db.Model):
     
      __tablename__ = 'tb_cidade'
 
