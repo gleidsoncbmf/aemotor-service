@@ -1,6 +1,6 @@
 from helpers.database import db
 
-class Endereco():
+class Endereco(db.Model):
     
      __tablename__ = "tb_endereco"
 
